@@ -103,7 +103,7 @@ phina.define('MainScene', {
     // 敵をループ
     this.treeGroup.children.each(function(tree) {
       // 判定用の円
-      var c1 = Circle(tree.x,tree.y,70);
+      var c1 = Circle(tree.x,tree.y,60);
       var c2 = Circle(player.x,player.y,50); 
       // 円判定
       if(Collision.testCircleCircle(c1,c2)){
@@ -146,7 +146,7 @@ phina.define('Tree',{
   init:function(){
     this.superInit('tree',140,140);
     this.x =　Random.randint(50,SCREEN_WIDTH - 100);
-    this.y = SCREEN_HEIGHT - 100;
+    this.y = SCREEN_HEIGHT;
     this.physical.velocity.y = speed;
   },
   update: function(){
@@ -162,7 +162,7 @@ phina.define('Orange',{
   init:function(){
     this.superInit('orange',70,70);
     this.x =　Random.randint(50,SCREEN_WIDTH - 100);
-    this.y = SCREEN_HEIGHT - 50;
+    this.y = SCREEN_HEIGHT;
     this.physical.velocity.y = speed;
   },
   update: function(){
